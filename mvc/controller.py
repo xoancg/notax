@@ -3,10 +3,10 @@ from mvc import view
 
 
 # CONTROLADOR (MVC)
-class Controlador:
+class Controller:
     def __init__(self):
-        self.model = Modelo()
-        self.view = Vista()
+        self.model = model.Model()
+        self.view = view.View()
 
     def get_notebooks(self):
         notebooks = self.model.notebooks

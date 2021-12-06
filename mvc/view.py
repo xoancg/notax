@@ -4,8 +4,12 @@ from tkinter import scrolledtext as st
 import tkinter as tk
 
 
+def init_view():
+    init_ui()
+    # pass
+
 # VISTA (MVC)
-class Vista:
+class View:
     def list_notebooks(self, notebooks):
         for notebook in notebooks:
             print(notebook.idNotebook, notebook.name)
@@ -28,7 +32,7 @@ class Vista:
 
 
 # class ClientBorrar:
-#     con = Controlador()
+#     con = Controller()
 #     print("\nNotebooks:")
 #     con.get_notebooks()
 #     # print("\nNotebook default name:")
@@ -38,7 +42,6 @@ class Vista:
 #     print("\nTags:")
 #     con.get_tags()
 # pass
-
 
 # CLIENTE (MVC)
 class Client:
@@ -107,7 +110,8 @@ class Client:
 
 
 if __name__ == "__main__":
-    main_window = tk.Tk()
-    main_window.iconbitmap(ICO)  # Configuración en config/settings.py
-    app = Client(main_window)
-    main_window.mainloop()
+    def init_ui():
+        main_window = tk.Tk()
+        main_window.iconbitmap(ICO)  # Configuración en config/settings.py
+        app = Client(main_window)
+        main_window.mainloop()
