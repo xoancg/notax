@@ -1,0 +1,6 @@
+17:24:17: INFO [model.py:10] [OK] Fuck yeah! Database is here: database/notax.db
+17:24:17: INFO [model.py:59] Database connection is working
+17:25:39: INFO [model.py:10] [OK] Fuck yeah! Database is here: database/notax.db
+17:25:39: INFO [model.py:59] Database connection is working
+19:20:52: INFO [main.py:11] [OK] Fuck yeah! Database is here: database/notax.db
+19:20:52: INFO [main.py:60] Database connection is working
