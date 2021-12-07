@@ -5,6 +5,7 @@ import mvc.view as view
 def init_app():
     model.init_model()
     view.init_view()
+    pass
 
 
 if __name__ == "__main__":
