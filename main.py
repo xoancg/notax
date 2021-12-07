@@ -1,23 +1,5 @@
-from mvc import controller
-from mvc import model
-from mvc import view
+import mvc.controller as controller
 
 
-# INICIO DE LA APLICACIÓN
-
-model.init_db()  # Inicio base de datos
-view.init_view()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if __name__ == '__main__':
+    controller.init_app()
