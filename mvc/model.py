@@ -13,6 +13,7 @@ except Exception as e:
 class BaseModel(Model):
     """Base modelo según las buenas prácticas de Peewee. http://docs.peewee-orm.com/en/latest/peewee/models.html
     Las subclases de BaseModel heredarán la conexión a la base de datos"""
+
     class Meta:
         database = db
 
@@ -36,6 +37,19 @@ class Note(BaseModel):
 
 
 NoteTag = Note.tags.get_through_model()
+
+
+# Query
+class Modelo:
+    """Clase Modelo (MVC)"""
+    notebooks = Notebook.select(Notebook.idNotebook, Notebook.name).group_by(Notebook.idNotebook)
+    # notebooks = Notebook.select(Notebook.name).group_by(Notebook.idNotebook)
+    notebook_default = Notebook.select(Notebook.name).where(Notebook.idNotebook == 1)
+    # notebook_default = Notebook.select(Notebook.name).group_by(Notebook.idNotebook)
+    # notes = Note.select(Note.title, Note.content).order_by(Note.idNote)
+    # notes = Note.select(Note.idNotebook, Note.idNote, Note.title).order_by(Note.idNotebook)
+    notes = Note.select(Note.idNotebook, Note.idNote, Note.title).order_by(Note.idNotebook)
+    tags = Tag.select(Tag.name)
 
 
 def init_model():

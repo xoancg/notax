@@ -1,10 +1,16 @@
-import mvc.model as model
-import mvc.view as view
+from mvc.model import init_model
+from mvc.view import init_view
+
+
+class Controlador:
+    """Clase Controlador (MVC). En conexión con las clases Modelo y Vista"""
+    pass
 
 
 def init_app():
-    model.init_model()
-    view.init_view()
+    init_model()
+    init_view()
+    pass
 
 
 if __name__ == "__main__":

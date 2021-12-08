@@ -4,11 +4,23 @@ from tkinter import ttk
 import tkinter as tk
 
 
-class Client:
+class Vista:
+    def __init__(self):
+        pass
+
+    pass
+
+
+def save_note():
+    print('save note2')
+
+
+class Window:
     def __init__(self, window):
         # Atributos del constructor
         self.win = window
         self.win.title('Notax')
+        self.win.iconbitmap(ICO)  # Configuración en config/settings.py
 
         global frame_note
 
@@ -40,7 +52,8 @@ class Client:
         self.content.grid(row=4, column=1, sticky=tk.N + tk.S + tk.W)
 
         # Botón para guardar cambios en la nota
-        ttk.Button(frame_note, text='GUARDAR NOTA').grid(row=5, columnspan=2, ipadx=50, pady=10)
+        ttk.Button(frame_note, text='GUARDAR NOTA', command=save_note()).grid(row=5, columnspan=2, ipadx=50,
+                                                                              pady=10)
 
         # Rejilla para mostrar la lista de notas
         frame_list = tk.LabelFrame(self.win, text=' LISTA DE NOTAS ')
@@ -70,10 +83,8 @@ class Client:
 
 
 def init_view():
-    # print('init_view function')
     main_window = tk.Tk()
-    main_window.iconbitmap(ICO)  # Configuración en config/settings.py
-    Client(main_window)
+    Window(main_window)
     main_window.mainloop()
 
 
