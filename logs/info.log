@@ -1,18 +1,16 @@
-17:24:17: INFO [model.py:10] [OK] Fuck yeah! Database is here: database/notax.db
-17:24:17: INFO [model.py:59] Database connection is working
-17:25:39: INFO [model.py:10] [OK] Fuck yeah! Database is here: database/notax.db
-17:25:39: INFO [model.py:59] Database connection is working
-19:20:52: INFO [main.py:11] [OK] Fuck yeah! Database is here: database/notax.db
-19:20:52: INFO [main.py:60] Database connection is working
-19:57:21: INFO [model.py:12] [OK] Fuck yeah! Database is here: database/notax.db
-19:57:21: INFO [model.py:56] Database connection is working
-19:57:52: INFO [model.py:12] [OK] Fuck yeah! Database is here: database/notax.db
-19:57:52: INFO [model.py:56] Database connection is working
-19:59:50: INFO [model.py:12] [OK] Fuck yeah! Database is here: database/notax.db
-19:59:50: INFO [model.py:56] Database connection is working
-20:00:43: INFO [model.py:12] [OK] Fuck yeah! Database is here: database/notax.db
-20:00:43: INFO [model.py:56] Database connection is working
-20:01:47: INFO [model.py:12] [OK] Fuck yeah! Database is here: database/notax.db
-20:01:47: INFO [model.py:56] Database connection is working
-20:02:26: INFO [model.py:12] [OK] Fuck yeah! Database is here: database/notax.db
-20:02:26: INFO [model.py:56] Database connection is working
+11:25:10: INFO [model.py:41] [OK] Fuck yeah! Database is here: database/notax.db
+11:25:10: ERROR [model.py:54] [!] Database connection error! > database attribute does not appear to be set on the model: <Model: Notebook>
+11:27:00: INFO [model.py:40] [OK] Fuck yeah! Database is here: database/notax.db
+11:27:00: ERROR [model.py:53] [!] Database connection error! > database attribute does not appear to be set on the model: <Model: Notebook>
+11:27:49: INFO [model.py:40] [OK] Fuck yeah! Database is here: database/notax.sqlite
+11:27:49: ERROR [model.py:53] [!] Database connection error! > database attribute does not appear to be set on the model: <Model: Notebook>
+11:33:08: INFO [model.py:7] [OK] Fuck yeah! Database is here: database/notax.sqlite
+11:33:08: INFO [model.py:49] Database connection is working
+11:39:49: INFO [model.py:7] [OK] Fuck yeah! Database is here: database/notax.db
+11:39:49: INFO [model.py:49] Database connection is working
+11:41:35: INFO [model.py:7] [OK] Fuck yeah! Database is here: database/notax.db
+11:41:35: INFO [model.py:49] Database connection is working
+11:42:43: INFO [model.py:7] [OK] Fuck yeah! Database is here: database/notax.db
+11:42:43: INFO [model.py:49] Database connection is working
+11:43:17: INFO [model.py:7] [OK] Fuck yeah! Database is here: database/notax.db
+11:43:17: INFO [model.py:49] Database connection is working

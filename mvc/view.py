@@ -1,6 +1,6 @@
 from config.settings import *
-from tkinter import ttk
 from tkinter import scrolledtext as st
+from tkinter import ttk
 import tkinter as tk
 
 
@@ -9,8 +9,8 @@ class Client:
         # Atributos del constructor
         self.win = window
         self.win.title('Notax')
+
         global frame_note
-        # con = Controlador()
 
         # Inicio de la creación de la interfaz gráfica
         # Marco que contiene los elementos para la edición de notas
