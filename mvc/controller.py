@@ -1,5 +1,6 @@
 from mvc.model import init_model
 from mvc.view import init_view
+import mvc.view
 
 
 class Controlador:

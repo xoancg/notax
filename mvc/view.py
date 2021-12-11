@@ -5,14 +5,13 @@ import tkinter as tk
 
 
 class Vista:
-    def __init__(self):
-        pass
+    def __init__(self, note):
+        self.note = note
+
+    def save_note(self):
+        return
 
     pass
-
-
-def save_note():
-    print('save note2')
 
 
 class Window:
@@ -52,8 +51,8 @@ class Window:
         self.content.grid(row=4, column=1, sticky=tk.N + tk.S + tk.W)
 
         # Botón para guardar cambios en la nota
-        ttk.Button(frame_note, text='GUARDAR NOTA', command=save_note()).grid(row=5, columnspan=2, ipadx=50,
-                                                                              pady=10)
+        ttk.Button(frame_note, text='GUARDAR NOTA', command=None).grid(row=5, columnspan=2, ipadx=50,
+                                                                       pady=10)
 
         # Rejilla para mostrar la lista de notas
         frame_list = tk.LabelFrame(self.win, text=' LISTA DE NOTAS ')
