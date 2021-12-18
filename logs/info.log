@@ -179,3 +179,10 @@
 10:52:03: INFO [model.py:7] [OK] Fuck yeah! Database is here: database/notax.db
 10:52:16: INFO [model.py:7] [OK] Fuck yeah! Database is here: database/notax.db
 10:52:35: INFO [model.py:7] [OK] Fuck yeah! Database is here: database/notax.db
+11:21:17: INFO [model.py:7] [OK] Fuck yeah! Database is here: database/notax.db
+11:21:17: INFO [model.py:63] Database connection is working
+11:21:59: INFO [model.py:7] [OK] Fuck yeah! Database is here: database/notax.db
+11:22:12: INFO [model.py:7] [OK] Fuck yeah! Database is here: database/notax.db
+11:22:12: INFO [model.py:63] Database connection is working
+11:22:43: INFO [model.py:7] [OK] Fuck yeah! Database is here: database/notax.db
+11:22:43: INFO [model.py:63] Database connection is working
