@@ -1,5 +1,4 @@
 import mvc.model as model
-import mvc.view as view
 
 
 class Controlador:
@@ -9,8 +8,8 @@ class Controlador:
     controller_instance = None
 
     def __init__(self):
-        # self.model = model.Modelo()
-        # self.view = view.Vista()
+        self.model = model.Modelo()
+        # self.view = Vista()
         Controlador.controller_instance = self
 
     # Singleton. Si no existe ninguna instancia de Controlador, la crea; si existe, devuelve la instancia existente
@@ -20,8 +19,13 @@ class Controlador:
             Controlador()
         return Controlador.controller_instance
 
+    # Devuelve lista de notas
+    def get_notes(self):
+        return self.model.notes
+
+    # El controlador inicia el modelo y la vista
     def init_app(self):
+        # import mvc.model as model
         model.init_model()
+        import mvc.view as view
         view.init_view()
-
-

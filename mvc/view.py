@@ -2,10 +2,14 @@ from config.settings import *
 from tkinter import scrolledtext as st
 from tkinter import ttk
 import tkinter as tk
+from mvc.controller import Controlador
 
 
 class Vista:
-    # con = Controlador()
+    """Clase Modelo (MVC). Crea la interfaz de usuario y se comunica bidireccionalmente con Controlador (MVC)"""
+
+    # Instancia del controlador
+    con = Controlador.get_controller_instance()
 
     def __init__(self, window):
         # Atributos del constructor
@@ -58,8 +62,8 @@ class Vista:
         self.tree.heading("#3", text="Etiquetas", anchor=tk.CENTER)
 
         # Relleno de rejilla con lista de notas
-        # for note in self.con.get_notes():
-        #     self.tree.insert('', tk.END, text=note.idNotebook, values=(note.idNote, note.title))
+        for note in self.con.get_notes():
+            self.tree.insert('', tk.END, text=note.idNote, values=(note.title, note.content, note.content))
 
         # Scroll vertical rejilla - ¡Sin probar!
         yscrollbar = tk.Scrollbar(frame_list)
@@ -67,8 +71,8 @@ class Vista:
         self.tree.config(yscrollcommand=yscrollbar.set)
 
         # Botones para editar y borrar la nota seleccionada en la rejilla
-        ttk.Button(text='EDITAR').grid(row=8, column=0, columnspan=2, ipadx=50, pady=10)
-        ttk.Button(text='BORRAR').grid(row=8, column=1, columnspan=2, ipadx=50, pady=10)
+        ttk.Button(text='EDITAR', command=None).grid(row=8, column=0, columnspan=2, ipadx=50, pady=10)
+        ttk.Button(text='BORRAR', command=None).grid(row=8, column=1, columnspan=2, ipadx=50, pady=10)
         # ttk.Button(text='LIMPIAR LISTA').grid(row=9, column=1, columnspan=2, ipadx=50, pady=10)
 
         # Foco en la primera fila de la rejilla al abrir la ventana - ¡Sin probar!
