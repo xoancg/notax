@@ -63,7 +63,7 @@ class Vista:
 
         # Relleno de rejilla con lista de notas
         for note in self.con.get_notes():
-            self.tree.insert('', tk.END, text=note.idNote, values=(note.title, note.content, note.content))
+            self.tree.insert('', tk.END, text=note.notebook, values=(note.title, note.content, note.content))
 
         # Scroll vertical rejilla - ¡Sin probar!
         yscrollbar = tk.Scrollbar(frame_list)

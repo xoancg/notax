@@ -59,9 +59,9 @@ class Modelo:
 
     # Consultas Notebook
     notebooks = Notebook.select(Notebook.idNotebook, Notebook.name).group_by(Notebook.idNotebook)
-    # notebooks = Notebook.select(Notebook.name).group_by(Notebook.idNotebook)
+    # notebooks = Notebook.select(Notebook.notebook).group_by(Notebook.idNotebook)
     notebook_default = Notebook.select(Notebook.name).where(Notebook.idNotebook == 1)
-    # notebook_default = Notebook.select(Notebook.name).group_by(Notebook.idNotebook)
+    # notebook_default = Notebook.select(Notebook.notebook).group_by(Notebook.idNotebook)
 
     # Consultas Note
     # notes = Note.select(Note.idNotebook, Note.idNote, Note.title, Note.content).order_by(Note.idNotebook)
@@ -79,13 +79,13 @@ def init_model():
 
     # Debug
     # Crea la libreta por defecto
-    # notebook1 = Notebook.create(name='default name1')
-    # notebook2 = Notebook.create(name='default name2')
+    # notebook1 = Notebook.create(notebook='default name1')
+    # notebook2 = Notebook.create(notebook='default name2')
     # note1 = Note.create(idNotebook=1, title="Title1", content="Contenido de la nota1")
     # note2 = Note.create(idNotebook=2, title="Title2", content="Contenido de la nota2")
     # note3 = Note.create(idNotebook=1, idNote=99 title="Title3", content="Contenido da nota3")
-    # tag1 = Tag.create(name='etiqueta1')
-    # tag2 = Tag.create(name='etiqueta2')
+    # tag1 = Tag.create(notebook='etiqueta1')
+    # tag2 = Tag.create(notebook='etiqueta2')
     # notetag1 = NoteTag.create(note_id=1, tag_id=1)
     # notetag1 = NoteTag.create(note_id=2, tag_id=2)
 
