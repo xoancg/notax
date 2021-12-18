@@ -5,16 +5,8 @@ import tkinter as tk
 
 
 class Vista:
-    def __init__(self, note):
-        self.note = note
+    # con = Controlador()
 
-    def save_note(self):
-        return
-
-    pass
-
-
-class Window:
     def __init__(self, window):
         # Atributos del constructor
         self.win = window
@@ -65,6 +57,10 @@ class Window:
         self.tree.heading("#2", text="Contenido", anchor=tk.CENTER)
         self.tree.heading("#3", text="Etiquetas", anchor=tk.CENTER)
 
+        # Relleno de rejilla con lista de notas
+        # for note in self.con.get_notes():
+        #     self.tree.insert('', tk.END, text=note.idNotebook, values=(note.idNote, note.title))
+
         # Scroll vertical rejilla - ¡Sin probar!
         yscrollbar = tk.Scrollbar(frame_list)
         yscrollbar.grid(row=7, column=2, sticky="nsew")
@@ -83,7 +79,7 @@ class Window:
 
 def init_view():
     main_window = tk.Tk()
-    Window(main_window)
+    Vista(main_window)
     main_window.mainloop()
 
 
