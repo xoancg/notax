@@ -4,7 +4,7 @@ from peewee import *
 # Instanciación de la base de datos con activación expresa de claves foráneas (desactivadas por defecto en SQLite)
 try:
     db = SqliteDatabase(DB_NAME, pragmas=DB_PRAGMAS)
-    logging.info(msg=f'[OK] Fuck yeah! Database is here: {DB_NAME}')
+    logging.info(msg=f'[OK] Fuck yeah! Database path: {DB_NAME}')
 except Exception as e:
     logging.error(msg=f'[!] Database connection error! > {e}')
 
@@ -52,6 +52,7 @@ class Modelo:
     tags = Tag.select(Tag.name)
 
 
+# Inicio de la base de datos
 def init_model():
     try:
         db.connect()
@@ -60,14 +61,22 @@ def init_model():
                           Tag,
                           NoteTag]
                          )
-        logging.info(msg=f'Database connection is working')
+        logging.info(msg=f'[OK] Database connection is working')
     except Exception as e:
         logging.error(msg=f'[!] Database connection error! > {e}')
 
+    # Debug
+    # Crea la libreta por defecto
+    # notebook1 = Notebook.create(name='default name1')
+    # notebook2 = Notebook.create(name='default name2')
+    # note1 = Note.create(idNotebook=1, title="Title1", content="Contenido da nota1")
+    # note2 = Note.create(idNotebook=2, title="Title2", content="Contenido da nota2")
+    # note3 = Note.create(idNotebook=1, idNote=99 title="Title3", content="Contenido da nota3")
+    # tag1 = Tag.create(name='etiqueta1')
+    # tag2 = Tag.create(name='etiqueta2')
+    # notetag1 = NoteTag.create(note_id=1, tag_id=1)
 
+
+# Inicio del modelo desde el controlador
 if __name__ == "__main__":
     init_model()
-
-
-
-
