@@ -1,4 +1,5 @@
 import mvc.model as model
+# import mvc.view as view
 
 
 class Controlador:
@@ -8,7 +9,7 @@ class Controlador:
     controller_instance = None
 
     def __init__(self):
-        self.model = model.Modelo()
+        self.model = model
         # self.view = Vista()
         Controlador.controller_instance = self
 
@@ -21,7 +22,7 @@ class Controlador:
 
     # Devuelve lista de notas
     def get_notes(self):
-        return self.model.notes
+        return self.model.query_notes()
 
     # El controlador inicia el modelo y la vista
     def init_app(self):

@@ -210,3 +210,110 @@
 17:22:37: ERROR [model.py:80] [!] Database connection error! > Connection already opened.
 17:24:22: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
 17:24:22: ERROR [model.py:80] [!] Database connection error! > Connection already opened.
+17:35:00: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:35:21: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:36:35: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:36:43: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:36:43: ERROR [model.py:81] [!] Database connection error! > Connection already opened.
+17:36:53: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:36:53: ERROR [model.py:81] [!] Database connection error! > Connection already opened.
+17:37:09: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:37:09: ERROR [model.py:81] [!] Database connection error! > Connection already opened.
+17:37:52: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:37:52: ERROR [model.py:81] [!] Database connection error! > Connection already opened.
+17:38:23: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:38:23: ERROR [model.py:81] [!] Database connection error! > Connection already opened.
+17:38:40: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:38:40: ERROR [model.py:81] [!] Database connection error! > Connection already opened.
+17:38:54: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:38:54: ERROR [model.py:81] [!] Database connection error! > Connection already opened.
+17:39:00: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:39:00: ERROR [model.py:81] [!] Database connection error! > Connection already opened.
+17:39:09: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:39:09: ERROR [model.py:81] [!] Database connection error! > Connection already opened.
+17:40:41: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:40:41: ERROR [model.py:81] [!] Database connection error! > Connection already opened.
+17:41:20: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:41:34: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:41:34: ERROR [model.py:86] [!] Database connection error! > Connection already opened.
+17:42:23: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:42:30: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:42:35: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:42:35: ERROR [model.py:86] [!] Database connection error! > Connection already opened.
+17:43:10: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:43:10: ERROR [model.py:86] [!] Database connection error! > Connection already opened.
+17:43:47: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:43:47: ERROR [model.py:83] [!] Database connection error! > Connection already opened.
+17:44:47: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:45:11: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:45:52: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:46:24: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:46:30: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:47:57: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:49:57: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:49:58: INFO [model.py:81] [OK] Database connection is working
+17:51:33: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:51:33: INFO [model.py:81] [OK] Database connection is working
+17:51:47: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:52:05: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:52:19: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:52:19: ERROR [model.py:83] [!] Database connection error! > Connection already opened.
+17:52:32: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:52:32: ERROR [model.py:83] [!] Database connection error! > Connection already opened.
+18:15:48: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:15:53: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:15:53: ERROR [model.py:87] [!] Database connection error! > Connection already opened.
+08:03:22: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+08:03:22: ERROR [model.py:87] [!] Database connection error! > Connection already opened.
+08:06:46: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+08:07:20: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+08:07:49: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+08:07:49: ERROR [model.py:89] [!] Database connection error! > Connection already opened.
+08:10:14: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+08:10:14: ERROR [model.py:93] [!] Database connection error! > Connection already opened.
+08:10:31: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+08:10:31: ERROR [model.py:93] [!] Database connection error! > Connection already opened.
+08:10:46: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+08:10:46: ERROR [model.py:93] [!] Database connection error! > Connection already opened.
+08:11:39: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+08:12:02: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+08:12:08: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+08:12:36: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+08:12:57: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+08:13:11: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:17:30: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+17:18:01: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:11:11: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:11:28: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:11:28: INFO [model.py:94] [OK] Database connection is working
+18:12:53: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:12:53: INFO [model.py:94] [OK] Database connection is working
+18:14:17: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:15:10: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:17:37: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:17:45: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:17:45: INFO [model.py:94] [OK] Database connection is working
+18:20:04: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:20:04: ERROR [model.py:101] [!] Database connection error! > Connection already opened.
+18:21:01: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:21:01: ERROR [model.py:98] [!] Database connection error! > Connection already opened.
+18:21:32: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:21:32: ERROR [model.py:97] [!] Database connection error! > Connection already opened.
+18:26:58: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:26:58: ERROR [model.py:97] [!] Database connection error! > Connection already opened.
+18:27:17: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:27:17: ERROR [model.py:97] [!] Database connection error! > Connection already opened.
+18:31:04: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:31:04: ERROR [model.py:97] [!] Database connection error! > Connection already opened.
+18:31:30: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:31:30: ERROR [model.py:97] [!] Database connection error! > Connection already opened.
+18:31:41: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:31:41: ERROR [model.py:97] [!] Database connection error! > Connection already opened.
+18:32:44: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:32:44: ERROR [model.py:97] [!] Database connection error! > Connection already opened.
+18:33:03: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:33:03: ERROR [model.py:97] [!] Database connection error! > Connection already opened.
+18:33:22: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:33:22: ERROR [model.py:97] [!] Database connection error! > Connection already opened.
+18:33:31: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:33:31: ERROR [model.py:97] [!] Database connection error! > Connection already opened.

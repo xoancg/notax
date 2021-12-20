@@ -34,36 +34,53 @@ class Note(BaseModel):
     notebook = ForeignKeyField(Notebook)
     title = CharField(max_length=120, null=False)
     content = CharField(max_length=500, null=True)
-    tags = ManyToManyField(Tag, backref='notes')
+    tag = ManyToManyField(Tag, backref='notes')
+    # tag = ManyToManyField(Tag, backref='notes')
     # El atributo backref se expone como una consulta Select prefiltrada (es una referencia implícita)
     # http://docs.peewee-orm.com/en/latest/peewee/relationships.html
 
 
-NoteTag = Note.tags.get_through_model()
+NoteTag = Note.tag.get_through_model()
 
+
+# Consultas Notebook
+# notebooks = Notebook.select(Notebook.notebook).group_by(Notebook.idNotebook)
+# notebooks = Notebook.select(Notebook.notebook).group_by(Notebook.idNotebook)
+# notebook_default = Notebook.select(Notebook.notebook).where(Notebook.idNotebook == 1)
+# notebook_default = Notebook.select(Notebook.notebook).group_by(Notebook.idNotebook)
+
+# Consultas Note
+# notes = Note.select(Note.idNotebook, Note.idNote, Note.title, Note.content).order_by(Note.idNotebook)
+# notes = Note.select(Note.idNote, Note.title, Note.content, Note.idNotebook).order_by(Note.idNote)
+# notes = Note.select(Note.idNote, Note.title, Note.content).join(NoteTag) # Devuelve todas las notas que tengan tag
+# notes = Note.select(Note.notebook, Note.title, Note.content, Note.content).join(Notebook).order_by(Notebook.notebook)
+
+# notes_tag = Note.select(Note.title, Note.content, Note.tag)\
+#     .join(NoteTag).order_by(Note.title)
+
+# Esta consulta devuelve todos ok por print
+# for row in query_notes().dicts():
+#     print(row)
+# print('')
+# for row in notes_tag.dicts():
+#     print(row)
+
+# for row in Note.select(Notebook.notebook, Note.title, Note.content)\
+#         .join(Notebook).dicts():
+#     print(row)
+
+# Consultas Tag
+# tags = Tag.select(Tag.tag)
 
 # Listado de Query
-class Modelo:
-    """Clase Modelo (MVC). Definición de las consultas a la base de datos"""
+def query_notes():
+    notes = Note.select(Notebook.notebook, Note.title, Note.content, Note.content) \
+        .join(Notebook).order_by(Notebook.notebook)
+    return notes
 
-    # Consultas Notebook
-    # notebooks = Notebook.select(Notebook.notebook).group_by(Notebook.idNotebook)
-    # notebooks = Notebook.select(Notebook.notebook).group_by(Notebook.idNotebook)
-    # notebook_default = Notebook.select(Notebook.notebook).where(Notebook.idNotebook == 1)
-    # notebook_default = Notebook.select(Notebook.notebook).group_by(Notebook.idNotebook)
 
-    # Consultas Note
-    # notes = Note.select(Note.idNotebook, Note.idNote, Note.title, Note.content).order_by(Note.idNotebook)
-    # notes = Note.select(Note.idNote, Note.title, Note.content, Note.idNotebook).order_by(Note.idNote)
-    # notes = Note.select(Note.idNote, Note.title, Note.content).join(NoteTag) # Devuelve todas las notas que tengan tag
-    # notes = Note.select(Note.notebook, Note.title, Note.content, Note.content).join(Notebook).order_by(Notebook.notebook)
-    notes = Note.select(Notebook.notebook, Note.title, Note.content, Note.content).join(Notebook)\
-        .order_by(Notebook.notebook)
-
-    for note in Note.select(Notebook.notebook, Note.title, Note.content, Note.content).join(Notebook).dicts():
-        print(note)
-    # Consultas Tag
-    tags = Tag.select(Tag.tag)
+for row in query_notes().dicts():
+    print(row)
 
 
 # Inicio de la base de datos
