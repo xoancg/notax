@@ -317,3 +317,7 @@
 18:33:22: ERROR [model.py:97] [!] Database connection error! > Connection already opened.
 18:33:31: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
 18:33:31: ERROR [model.py:97] [!] Database connection error! > Connection already opened.
+18:41:17: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:41:17: INFO [model.py:96] [OK] Database connection is working
+18:41:35: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+18:41:35: ERROR [model.py:97] [!] Database connection error! > Connection already opened.
