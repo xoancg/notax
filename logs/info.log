@@ -321,3 +321,71 @@
 18:41:17: INFO [model.py:96] [OK] Database connection is working
 18:41:35: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
 18:41:35: ERROR [model.py:97] [!] Database connection error! > Connection already opened.
+19:37:39: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:38:39: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:39:38: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:39:38: INFO [model.py:95] [OK] Database connection is working
+19:40:27: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:40:27: INFO [model.py:95] [OK] Database connection is working
+19:40:42: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:40:42: INFO [model.py:95] [OK] Database connection is working
+19:41:52: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:41:53: INFO [model.py:95] [OK] Database connection is working
+19:42:10: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:42:10: INFO [model.py:95] [OK] Database connection is working
+19:43:10: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:43:10: INFO [model.py:95] [OK] Database connection is working
+19:43:50: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:43:50: INFO [model.py:95] [OK] Database connection is working
+19:44:19: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:44:19: INFO [model.py:95] [OK] Database connection is working
+19:45:34: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:45:34: INFO [model.py:95] [OK] Database connection is working
+19:46:04: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:46:04: INFO [model.py:95] [OK] Database connection is working
+19:47:02: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:47:02: INFO [model.py:95] [OK] Database connection is working
+19:47:30: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:47:30: INFO [model.py:95] [OK] Database connection is working
+19:48:59: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:48:59: INFO [model.py:95] [OK] Database connection is working
+19:49:20: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:49:20: INFO [model.py:95] [OK] Database connection is working
+19:49:47: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:49:47: INFO [model.py:95] [OK] Database connection is working
+19:50:13: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:50:13: INFO [model.py:95] [OK] Database connection is working
+19:50:25: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:50:25: INFO [model.py:95] [OK] Database connection is working
+19:54:37: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:54:37: INFO [model.py:95] [OK] Database connection is working
+19:59:52: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+19:59:52: INFO [model.py:98] [OK] Database connection is working
+20:00:37: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+20:00:37: INFO [model.py:104] [OK] Database connection is working
+20:01:40: INFO [model.py:7] [OK] Fuck yeah! Database path: database/notax.db
+20:01:40: INFO [model.py:104] [OK] Database connection is working
+19:12:07: INFO [model.py:9] [OK] Fuck yeah! Database path: database/notax.db
+19:12:07: INFO [model.py:106] [OK] Database connection is working
+19:12:35: INFO [model.py:9] [OK] Fuck yeah! Database path: database/notax.db
+19:12:35: INFO [model.py:106] [OK] Database connection is working
+19:14:09: INFO [model.py:9] [OK] Fuck yeah! Database path: database/notax.db
+19:14:09: INFO [model.py:105] [OK] Database connection is working
+16:47:19: INFO [model.py:9] [OK] Fuck yeah! Database path: database/notax.db
+16:47:19: INFO [model.py:105] [OK] Database connection is working
+16:57:26: INFO [model.py:9] [OK] Fuck yeah! Database path: database/notax.db
+16:57:26: INFO [model.py:105] [OK] Database connection is working
+16:57:49: INFO [model.py:9] [OK] Fuck yeah! Database path: database/notax.db
+16:57:49: INFO [model.py:105] [OK] Database connection is working
+16:57:59: INFO [model.py:9] [OK] Fuck yeah! Database path: database/notax.db
+16:57:59: INFO [model.py:105] [OK] Database connection is working
+16:58:23: INFO [model.py:9] [OK] Fuck yeah! Database path: database/notax.db
+16:58:23: INFO [model.py:105] [OK] Database connection is working
+16:59:56: INFO [model.py:9] [OK] Fuck yeah! Database path: database/notax.db
+16:59:56: INFO [model.py:105] [OK] Database connection is working
+17:01:42: INFO [model.py:9] [OK] Fuck yeah! Database path: database/notax.db
+17:01:42: INFO [model.py:105] [OK] Database connection is working
+17:06:41: INFO [model.py:9] [OK] Fuck yeah! Database path: database/notax.db
+17:06:41: INFO [model.py:105] [OK] Database connection is working
+17:27:49: INFO [model.py:9] [OK] Fuck yeah! Database path: database/notax.db
+17:27:49: INFO [model.py:105] [OK] Database connection is working

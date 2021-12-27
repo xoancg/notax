@@ -24,6 +24,20 @@ class Controlador:
     def get_notes(self):
         return self.model.query_notes()
 
+    # Botón nueva nota
+    def save_note(self, notebook, title, labels, content):
+        note = model.Note(notebook=notebook, title=title, tags=labels, content=content)
+        note.save()
+
+    # Botón Guardar nota
+    def edit_note(self):
+        pass
+
+    # Borrar nota
+    def delete_note(self):
+        pass
+
+
     # El controlador inicia el modelo y la vista
     def init_app(self):
         # import mvc.model as model

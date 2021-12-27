@@ -45,6 +45,8 @@ def init_view():
     content.grid(row=4, column=1, sticky=tk.N + tk.S + tk.W)
 
     # Botón para guardar cambios en la nota
+    # Actualiza el registro si ya existe o crea uno nuevo si no existe previamente
+    # Llama a la función que actualiza la rejilla del listado de notas
     ttk.Button(frame_note, text='GUARDAR NOTA', command=None).grid(row=5, columnspan=2, ipadx=50,
                                                                    pady=10)
 
@@ -69,7 +71,9 @@ def init_view():
     tree.config(yscrollcommand=yscrollbar.set)
 
     # Botones para editar y borrar la nota seleccionada en la rejilla
-    ttk.Button(text='EDITAR', command=None).grid(row=8, column=0, columnspan=2, ipadx=50, pady=10)
+    # El botón EDITAR es redundante si se hace que se visualice el contenido de la nota al seleccionarla en rejilla
+    ttk.Button(text='NUEVA NOTA', command=None).grid(row=8, column=0, columnspan=2, ipadx=50, pady=10)
+    # BORRAR elimina la nota de la base de datos + Actualiza la rejilla del listado de notas
     ttk.Button(text='BORRAR', command=None).grid(row=8, column=1, columnspan=2, ipadx=50, pady=10)
     # ttk.Button(text='LIMPIAR LISTA').grid(row=9, column=1, columnspan=2, ipadx=50, pady=10)
 

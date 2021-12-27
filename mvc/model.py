@@ -1,3 +1,5 @@
+import peewee
+
 from config.settings import *
 from peewee import *
 
@@ -10,7 +12,7 @@ except Exception as e:
 
 
 # DEFINICIÓN DE CLASES
-class BaseModel(Model):
+class BaseModel(peewee.Model):
     """Base modelo según las buenas prácticas de Peewee. http://docs.peewee-orm.com/en/latest/peewee/models.html
     Las subclases de BaseModel heredarán la conexión a la base de datos"""
 
@@ -20,12 +22,18 @@ class BaseModel(Model):
 
 class Notebook(BaseModel):
     # idNotebook = AutoField(unique=True)
-    notebook = CharField(unique=True, max_length=120, null=False)
+    notebook = CharField(max_length=120)
+
+    class Meta:
+        db_table = 'notebooks'
 
 
 class Tag(BaseModel):
     # idTag = AutoField(unique=True)
     tag = CharField(unique=True, max_length=120)
+
+    class Meta:
+        db_table = 'tags'
 
 
 class Note(BaseModel):
@@ -34,10 +42,14 @@ class Note(BaseModel):
     notebook = ForeignKeyField(Notebook)
     title = CharField(max_length=120, null=False)
     content = CharField(max_length=500, null=True)
-    tag = ManyToManyField(Tag, backref='notes')
+    tag = ManyToManyField(Tag)
+
     # tag = ManyToManyField(Tag, backref='notes')
     # El atributo backref se expone como una consulta Select prefiltrada (es una referencia implícita)
     # http://docs.peewee-orm.com/en/latest/peewee/relationships.html
+
+    class Meta:
+        db_table = 'notes'
 
 
 NoteTag = Note.tag.get_through_model()
@@ -74,13 +86,20 @@ NoteTag = Note.tag.get_through_model()
 
 # Listado de Query
 def query_notes():
-    notes = Note.select(Notebook.notebook, Note.title, Note.content, Note.content) \
+    notes = Note.select(Note.notebook, Note.title, Note.content, Note.content) \
         .join(Notebook).order_by(Notebook.notebook)
     return notes
 
 
-for row in query_notes().dicts():
-    print(row)
+def save_notes(notebook, title, labels, content):
+    # notes = Note.save(Note.notebook, Note.title, Note.content, Note.content)
+    pass
+
+
+#
+#
+# for row in query_notes().dicts():
+#     print(row)
 
 
 # Inicio de la base de datos
@@ -89,8 +108,7 @@ def init_model():
         db.connect()
         db.create_tables([Notebook,
                           Note,
-                          Tag,
-                          NoteTag]
+                          Tag]
                          )
         logging.info(msg=f'[OK] Database connection is working')
     except Exception as e:
@@ -104,8 +122,8 @@ def init_model():
     # note1 = Note.create(notebook_id=2, title="Title2", content="Contenido de la nota2")
     # tag1 = Tag.create(tag='etiqueta1')
     # tag2 = Tag.create(tag='etiqueta2')
-    # notetag1 = NoteTag.create(note_id=1, tag_id=1)
-    # notetag2 = NoteTag.create(note_id=2, tag_id=2)
+    # notetag1 = NoteTag.create(note_id=1, tag_id=1)  # No funciona
+    # notetag2 = NoteTag.create(note_id=2, tag_id=2)  # No funciona
 
     # DELETE
     # delete = Notebook.delete().where(Notebook.notebook == 'default name1')
