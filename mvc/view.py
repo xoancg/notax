@@ -8,6 +8,7 @@ from mvc.controller import Controlador
 con = Controlador.get_controller_instance()
 
 
+# Probar qué pasa si sacamos el código de la función
 def init_view():
     main_window = tk.Tk()
     main_window.title('Notax')
@@ -70,8 +71,7 @@ def init_view():
     yscrollbar.grid(row=7, column=2, sticky="nsew")
     tree.config(yscrollcommand=yscrollbar.set)
 
-    # Botones para editar y borrar la nota seleccionada en la rejilla
-    # El botón EDITAR es redundante si se hace que se visualice el contenido de la nota al seleccionarla en rejilla
+    # Botones para crear nueva nota y borrar la nota seleccionada en la rejilla
     ttk.Button(text='NUEVA NOTA', command=None).grid(row=8, column=0, columnspan=2, ipadx=50, pady=10)
     # BORRAR elimina la nota de la base de datos + Actualiza la rejilla del listado de notas
     ttk.Button(text='BORRAR', command=None).grid(row=8, column=1, columnspan=2, ipadx=50, pady=10)
