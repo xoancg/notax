@@ -16,6 +16,7 @@ def init_view():
     # Vista(main_window)
     # main_window.mainloop()
 
+
     global frame_note
 
     # Inserta todos los registros de notas en la rejilla
@@ -50,11 +51,6 @@ def init_view():
     content = st.ScrolledText(frame_note, width=91, height=10)
     content.grid(row=4, column=1, sticky=tk.N + tk.S + tk.W)
 
-    # Botón para guardar cambios en la nota
-    # Actualiza el registro si ya existe o crea uno nuevo si no existe previamente
-    # Llama a la función que actualiza la rejilla del listado de notas
-    ttk.Button(frame_note, text='GUARDAR NOTA', command=None).grid(row=5, columnspan=2, ipadx=50,
-                                                                   pady=10)
 
     # Rejilla para mostrar la lista de notas
     frame_list = tk.LabelFrame(main_window, text=' LISTA DE NOTAS ')
@@ -67,15 +63,39 @@ def init_view():
     tree.heading("#2", text="Contenido", anchor=tk.CENTER)
     tree.heading("#3", text="Etiquetas", anchor=tk.CENTER)
 
-    list_notes()
-
     # Relleno de rejilla con lista de notas
-
+    list_notes()
 
     # Scroll vertical rejilla - ¡Sin probar!
     yscrollbar = tk.Scrollbar(frame_list)
     yscrollbar.grid(row=7, column=2, sticky="nsew")
     tree.config(yscrollcommand=yscrollbar.set)
+
+    # def save_note():
+    #     notes = con.get_notes
+    #     i = tree.focus()
+    #     note_selected = notes[i]
+    #     note_title = title.get()
+    #     note_notebook = notebook.get()
+    #     note_content = content.get()
+    #     note_tag = tag.get()
+    #     note_selected.notebook = note_notebook
+    #     note_selected.title = note_title
+    #     note_selected.content = note_content
+    #     note_selected.tag = note_tag
+    #     con.save_note(note_selected)
+    #
+    # def new_note():
+    #     note_title = title.get()
+    #     note_notebook = notebook.get()
+    #     note_content = content.get()
+    #     note_tag = tag.get()
+    #     con.newNote(note_notebook, note_title, note_content, note_tag)
+
+    # Botón para guardar cambios en la nota
+    # Actualiza el registro si ya existe o crea uno nuevo si no existe previamente
+    # Llama a la función que actualiza la rejilla del listado de notas
+    ttk.Button(frame_note, text='GUARDAR NOTA', command=None).grid(row=5, columnspan=2, ipadx=50, pady=10)
 
     # Botones para crear nueva nota y borrar la nota seleccionada en la rejilla
     ttk.Button(text='NUEVA NOTA', command=None).grid(row=8, column=0, columnspan=2, ipadx=50, pady=10)
