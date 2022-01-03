@@ -18,6 +18,11 @@ def init_view():
 
     global frame_note
 
+    # Inserta todos los registros de notas en la rejilla
+    def list_notes():
+        for note in con.get_notes():
+            tree.insert('', tk.END, text=note.notebook, values=(note.title, note.content, note.content))
+
     # Inicio de la creación de la interfaz gráfica
     # Marco que contiene los elementos para la edición de notas
     frame_note = tk.LabelFrame(main_window, text=' EDICIÓN DE NOTAS ')
@@ -62,9 +67,10 @@ def init_view():
     tree.heading("#2", text="Contenido", anchor=tk.CENTER)
     tree.heading("#3", text="Etiquetas", anchor=tk.CENTER)
 
+    list_notes()
+
     # Relleno de rejilla con lista de notas
-    for note in con.get_notes():
-        tree.insert('', tk.END, text=note.notebook, values=(note.title, note.content, note.content))
+
 
     # Scroll vertical rejilla - ¡Sin probar!
     yscrollbar = tk.Scrollbar(frame_list)

@@ -17,42 +17,53 @@ class BaseModel(peewee.Model):
     Las subclases de BaseModel heredarán la conexión a la base de datos"""
 
     class Meta:
+        """Especificación del nombre de la base de datos mediante la variable database"""
         database = db
 
 
 class Notebook(BaseModel):
+    """Modelo de Libreta"""
     # idNotebook = AutoField(unique=True)
     notebook = CharField(max_length=120)
 
     class Meta:
+        """Especificación del nombre de la tabla en la base de datos mediante la variable db_table"""
         db_table = 'notebooks'
 
 
 class Tag(BaseModel):
+    """Modelo de Etiqueta"""
     # idTag = AutoField(unique=True)
     tag = CharField(unique=True, max_length=120)
 
     class Meta:
+        """Especificación del nombre de la tabla en la base de datos mediante la variable db_table"""
         db_table = 'tags'
 
 
 class Note(BaseModel):
+    """Modelo de Nota"""
     # idNotebook = ForeignKeyField(Notebook)
     # idNote = AutoField(unique=True)
     notebook = ForeignKeyField(Notebook)
     title = CharField(max_length=120, null=False)
     content = CharField(max_length=500, null=True)
-    tag = ManyToManyField(Tag)
+    tag = ManyToManyField(Tag)  # https://docs.peewee-orm.com/en/latest/peewee/relationships.html#manytomanyfield
 
     # tag = ManyToManyField(Tag, backref='notes')
     # El atributo backref se expone como una consulta Select prefiltrada (es una referencia implícita)
     # http://docs.peewee-orm.com/en/latest/peewee/relationships.html
 
     class Meta:
+        """Especificación del nombre de la tabla en la base de datos mediante la variable db_table"""
         db_table = 'notes'
 
 
+# Tabla relación Note-Tag - # https://docs.peewee-orm.com/en/latest/peewee/relationships.html#manytomanyfield
 NoteTag = Note.tag.get_through_model()
+# Hay varias formas de crear la relación muchos-a-muchos
+# https://github.com/xoancg/bdpython_codigofacilito/blob/main/02-peewee/13-peewee_relacion_muchos_muchos.py
+# https://docs.peewee-orm.com/en/latest/peewee/relationships.html#implementing-many-to-many
 
 
 # Consultas Notebook
