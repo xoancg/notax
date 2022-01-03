@@ -73,8 +73,8 @@ def init_view():
 
     # def save_note():
     #     notes = con.get_notes
-    #     i = tree.focus()
-    #     note_selected = notes[i]
+    #     iid = tree.focus()
+    #     note_selected = notes[iid]
     #     note_title = title.get()
     #     note_notebook = notebook.get()
     #     note_content = content.get()
