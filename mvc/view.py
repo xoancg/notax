@@ -45,6 +45,7 @@ def init_view():
     tk.Label(frame_note, text=' Etiquetas: ').grid(row=3, column=0, padx=20, pady=5, sticky=tk.W)
     tag = ttk.Entry(frame_note, width=120)
     tag.grid(row=3, column=1, sticky=tk.W)
+    # Las etiquetas se separarán por comas. El string del campo tag será dividido con split(',')
 
     # Contenido de la nota seleccionada
     tk.Label(frame_note, text=' Contenido: ').grid(row=4, column=0, padx=20, pady=50, sticky=tk.W)
