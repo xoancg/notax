@@ -1,93 +1,88 @@
 import mvc.model as model
 
 
-# import mvc.view as view
-
-
 class Controlador:
     """Clase Controlador (MVC). En conexión con las clases Modelo y Vista"""
 
-    # Singleton
     controller_instance = None
 
     def __init__(self):
         self.model = model
-        # self.view = Vista()
         Controlador.controller_instance = self
 
-    # Singleton. Si no existe ninguna instancia de Controlador, la crea; si existe, devuelve la instancia existente
     @staticmethod
     def get_controller_instance():
+        """
+        Singleton - Patrón de Diseño
+        Si no existe ninguna instancia de Controlador, la crea; si existe, devuelve la instancia existente
+        :return: Instancia controlador
+        """
         if Controlador.controller_instance is None:
             Controlador()
         return Controlador.controller_instance
 
     # Devuelve lista de notas
     def get_notes(self):
-        """Método que devuelve el contenido de la consulta de todas las notas existentes en la base de datos"""
-        return self.model.query_notes()
+        """
+        Método que devuelve el contenido de la consulta de todas las notas existentes en la base de datos
+        :return: Todas las notas existentes en la base de datos
+        """
+        return self.model.get_notes()
 
-    def save_note(self, notebook, title, tags, content):
-        """Botón GUARDAR NOTA. Elimina el registro de una nota en la base de datos y actualiza la lista de notas en
-        rejilla."""
-        # 1-Actualizamos el registro de la nota con el contenido de los cuatro campos
-        note = model.Note(notebook=notebook, title=title, tags=tags, content=content)
-        note.save()
-        # 2-Actualizamos la lista de notas en rejilla
-        # ¿Cómo accedemos a la función list_notes() de view.py? ¿Controlador.get_notes()?
-        # 3-El contenido de la nota se mantiene visible
-        pass
+    def get_note_tags(self, note_name):
+        """
+        Método que devuelve las etiquetas asociadas a una nota
+        :param note_name: nombre de la nota de la que extraer sus etiquetas
+        :return: Etiquetas de la nota
+        """
+        return self.model.get_note_tags(note_name)
 
-    def new_note(self, notebook, title, tags, content):
-        """Botón NUEVA NOTA. Limpia los campos de la nota en la vista y crea un nuevo registro en la base de datos
-        con todos los campos en blanco. No actualiza la lista de notas en rejilla."""
-        # 1-Limpiamos los campos en blanco.
-        # Controlador.empty_note()
-        # 2-Creamos un nuevo registro de nota, con todos los campos en blanco
-        note = model.Note(notebook=notebook, title=title, tags=tags, content=content)
-        note.save()
+    def delete_tag(self, tag_name):
+        """
+        Método para eliminar una etiqueta
+        :param tag_name: Nombre de la etiqueta
+        """
+        return self.model.delete_tag(tag_name)
 
-        # Persistimos los datos. save() es un método de instancia, por lo que necesitamos crear un objeto para usarlo
-        # user1 = User(username='user1', email='user1@dominio.com', active=True)
-        # user1.save()
+    def save_notebook(self, notebook_name):
+        return self.model.save_notebook(notebook_name=notebook_name)
 
-    def delete_note(self):
-        """Botón BORRAR NOTA. Elimina el registro de una nota en la base de datos y actualiza la lista de notas en
-        rejilla."""
-        # ¿Parámetros? ¿note_id?
-        # 0-Cuando el usuario selecciona una nota en rejilla, el contenido de la misma se visualiza en la parte superior
-        # 1-Consultamos los valores de la instancia de la nota seleccionada en rejilla
-        # note = model.Note.select().where(Note.id == <note_id>)
-        # 2-Eliminamos dicha instancia con <instancia>.delete_instance()
-        # note.delete_instance()
-        # 3-Ponemos en blanco los cuatro campos de la nota que se visualizan en la parte superior de la vista
-        # Controlador.empty_note()
-        # 4-Actualizamos la lista de notas en rejilla
-        # ¿Cómo accedemos a la función list_notes() de view.py? ¿Controlador.get_notes()?
-        pass
+    def save_note(self, notebook, title, content):
+        """
+        Botón GUARDAR NOTA. Elimina el registro de una nota en la base de datos y actualiza la lista de notas en
+        rejilla.
+        :return: Nota guardada / actualizada
+        """
+        # Si la nota ya existe - Se actualiza. Si no existe - Se crea con el contenido
+        return self.model.save_note(notebook_name=notebook, title=title, content=content)
 
-        # Borrar registros. Método de instancia. Lo consultamos para poder usarlo y luego lo eliminamos
-        # user = User.select().where(User.username == 'user7').get()
-        # user.delete_instance()
+    def save_tag(self, tag_name):
+        """
+        Este método se utiliza para guardar una etiqueta
+        :param tag_name: nombre de la etiqueta
+        :return: Etiqueta guardada
+        """
+        return self.model.save_tag(name=tag_name)
 
-        # Otra forma. Método de clase, por lo que podemos usarlo directamente sobre el modelo (User.id) sin instanciar
-        # query = User.delete().where(User.id == 6)
-        # query.execute()
+    def assign_tag_note(self, note, tag):
+        """
+        Este método se utiliza para asiggnar una etiqueta a una nota y viceversa, relacion many-to-many
+        :param note: Nota a utilizar en la asignación
+        :param tag: Etiqueta a utilizar en la asignación
+        """
+        self.model.add_tag_note(note=note, tag=tag)
 
-    def empty_note(self):
-        """Método para vaciar, sólo a nivel de vista, el contenido de los cuatro campos que componen el registro de
-        una nota introduciendo strings vacíos en los mismos. Este método no afecta a ningún registro de la base de
-        datos."""
-        # ¿Parámetros?
-        # 1-Ejecuta la función save_note() para persistir el contenido actual de la nota
-        # Controlador.save_note()
-        # 2-Vacía el contenido de los cuatro campos de notas, SIN crear ningún registro en la base de datos
-        # (pone strings vacíos)
-        pass
+    def delete_note(self, note_name):
+        """
+        Elimina el registro de una nota en la base de datos.
+        :param note_name: Nombre de la nota
+        """
+        # 1. Cuando el usuario selecciona una nota, el contenido de la misma se visualiza en la parte superior
+        # 2. Consultamos los valores de la instancia de la nota seleccionada en rejilla
+        # 3. Eliminamos dicha instancia con <instancia>.delete_instance()
+        self.model.delete_note(note_name)
 
-    # El controlador inicia el modelo y la vista
-    def init_app(self):
-        # import mvc.model as model
-        model.init_model()
-        import mvc.view as view
-        view.init_view()
+
+# El controlador inicia el modelo
+if __name__ == "__main__":
+    model.init_model()

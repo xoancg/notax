@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b7753d3-8ee5-488a-a53e-379611df03a6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/notax.db" beforeDir="false" afterPath="$PROJECT_DIR$/notax.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../logs/info.log" beforeDir="false" afterPath="$PROJECT_DIR$/../logs/info.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +25,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../probas/peewee_join/my_app.db" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
 </project>

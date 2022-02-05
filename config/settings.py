@@ -3,7 +3,7 @@ import logging
 # Rutas de ficheros
 DB_NAME = "database/notax.db"
 DB_PRAGMAS = {'foreign_keys': 1, 'permanent': True}
-ICO= "res/img/notax.ico"
+ICO = "res/img/notax.ico"
 LOG_INFO = "logs/info.log"
 LOG_ERROR = "logs/error.log"
 
@@ -21,10 +21,9 @@ else:
 # Activar/Desactivar opciones de desarrollo - MODEL.PY
 deleteNotebook = False  # True para activar el borrado de LIBRETAS durante las pruebas de desarrollo
 deleteTag = False  # True para activar el borrado de ETIQUETAS durante las pruebas de desarrollo
-debug_db = True  # True para que se ejecuten las pruebas de la base de datos de este fichero
+debug_db = False  # True para que se ejecuten las pruebas de la base de datos de este fichero
 remove_db = False  # True para borrar el fichero de la base de datos al finalizar la ejecución del programa
 untag = False  # True para activar el desetiquetado de notas durante las pruebas de desarrollo
-
 
 # DB_NAME = "../database/notax.db" cuando se ejecuta model.py directamente
 # DB_NAME = "database/notax.db" cuando se ejecuta la función createDB desde main.py
