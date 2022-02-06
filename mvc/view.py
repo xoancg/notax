@@ -90,7 +90,12 @@ def init_view():
         content.delete("1.0", 'end')
 
     def nueva_nota():
+        # Limpia el formulario de edición de notas
         limpiar(notebook.get())
+
+        # Quita la selección en la lista de notas (para evitar sobreescribir la nota seleccionada con la nueva nota)
+        tree.selection_set()
+        tree.focus()
 
     # NUEVA NOTA
     ttk.Button(frame_note, text='NUEVA NOTA', command=nueva_nota).grid(row=5, column=0, columnspan=2, ipadx=50, pady=10)
@@ -106,7 +111,7 @@ def init_view():
         except:
             notebook_ = notebook.get()
             print(f'La libreta "{notebook_}" ya existe en la base de datos')
-        
+
         # Guardar la nota
         note = con.save_note(notebook.get(), title.get(), content.get("1.0", "end"))
         tags = tag.get().split(",")
@@ -151,8 +156,8 @@ def init_view():
     # Relleno de rejilla con lista de notas
     list_notes(tree)
 
-    # Scroll vertical rejilla - ¡Sin probar!
-    yscrollbar = tk.Scrollbar(frame_list, command = tree.yview)
+    # Scroll vertical rejilla
+    yscrollbar = tk.Scrollbar(frame_list, command=tree.yview)
     yscrollbar.grid(row=7, column=2, sticky="nsew")
     tree.config(yscrollcommand=yscrollbar.set)
 
@@ -202,7 +207,7 @@ def init_view():
             # Se eliminan los contenidos en pantalla de la nota eliminada en caso de estar mostrada
             limpiar(notebook.get())  # Reutilización de código --- Buenas prácticas
             tree.delete(tree.selection())  # Borrar la fila de la tabla
-        
+
         restore()
 
     # BORRAR
