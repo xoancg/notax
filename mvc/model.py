@@ -113,7 +113,7 @@ def get_notes():
     Método que devuelve todas las notas existentes en la base de datos
     :return notes: Devuelve todas las notas existentes en la base de datos
     """
-    notes = Note.select(Note.notebook, Note.title, Note.content).join(Notebook).order_by(Notebook.name)
+    notes = Note.select(Note.notebook, Note.title, Note.content, Note.created_date).join(Notebook).order_by(Notebook.name)
     return notes
 
 

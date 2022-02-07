@@ -151,7 +151,7 @@ def init_view():
     tree.heading("#0", text="Libreta", anchor=tk.CENTER)
     tree.heading("#1", text="Título", anchor=tk.CENTER)
     tree.heading("#2", text="Contenido", anchor=tk.CENTER)
-    tree.heading("#3", text="Última modificación", anchor=tk.CENTER)
+    tree.heading("#3", text="Fecha de creación", anchor=tk.CENTER)
 
     # Relleno de rejilla con lista de notas
     list_notes(tree)
