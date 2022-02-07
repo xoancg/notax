@@ -26,4 +26,4 @@ remove_db = False  # True para borrar el fichero de la base de datos al finaliza
 untag = False  # True para activar el desetiquetado de notas durante las pruebas de desarrollo
 
 # DB_NAME = "../database/notax.db" cuando se ejecuta model.py directamente
-# DB_NAME = "database/notax.db" cuando se ejecuta la función createDB desde main.py
+# DB_NAME = "database/notax.db" cuando se ejecuta la función de creación de la base de datos desde main.py

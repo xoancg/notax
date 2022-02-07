@@ -74,7 +74,7 @@ def init_view():
     content = st.ScrolledText(frame_note, width=91, height=10)
     content.grid(row=4, column=1, sticky=tk.N + tk.S + tk.W)
 
-    def limpiar(nb):
+    def clear(nb):
         """
         Este método limpia los campos en el formulario de nota, donde se añaden las nuevas notas
         """
@@ -91,7 +91,7 @@ def init_view():
 
     def nueva_nota():
         # Limpia el formulario de edición de notas
-        limpiar(notebook.get())
+        clear(notebook.get())
 
         # Quita la selección en la lista de notas (para evitar sobreescribir la nota seleccionada con la nueva nota)
         tree.selection_set()
@@ -130,7 +130,7 @@ def init_view():
                 con.assign_tag_note(note, x)
 
         # Después de guardar, borrar contenido de la pantalla
-        limpiar(notebook.get())  # Reutilización de código --- Buenas prácticas
+        clear(notebook.get())  # Reutilización de código --- Buenas prácticas
 
         # Añadir nota a la tabla
         try:  # Si la nota ya existe previamente y la estamos actualizando, borramos el registro anterior de la tabla
@@ -161,7 +161,7 @@ def init_view():
     yscrollbar.grid(row=7, column=2, sticky="nsew")
     tree.config(yscrollcommand=yscrollbar.set)
 
-    def cargar_contenido():
+    def mostrar():
         """
         Carga el contenido en la pantalla principal de la nota seleccionada en la lista de notas
         """
@@ -172,7 +172,7 @@ def init_view():
             values = tree.item(data, "values")
             titulo_nota = values[0]
             contenido_nota = values[1]
-            limpiar(notebook.get())  # Reutilización de código --- Buenas prácticas
+            clear(notebook.get())  # Reutilización de código --- Buenas prácticas
             notebook.insert(0, libreta)  # Escribir el título correspondiente a la nota
             title.insert(0, titulo_nota)
             content.insert("1.0", contenido_nota)
@@ -180,13 +180,13 @@ def init_view():
             tag.insert(0, tags)
 
     # MOSTRAR NOTA
-    ttk.Button(text='MOSTRAR', command=cargar_contenido).grid(row=8, column=0, columnspan=2, ipadx=50, pady=10)
+    ttk.Button(text='MOSTRAR', command=mostrar).grid(row=8, column=0, columnspan=2, ipadx=50, pady=10)
 
     def borrar():
         """
         Elimina la nota de la base de datos + Actualiza la rejilla del listado de notas
         """
-        cargar_contenido()
+        mostrar()
         # Coger el item seleccionado de la tabla
         for data in tree.selection():
             # data contiene lo siguiente ->
@@ -205,7 +205,7 @@ def init_view():
             con.delete_note(note_name=nombre_nota)
 
             # Se eliminan los contenidos en pantalla de la nota eliminada en caso de estar mostrada
-            limpiar(notebook.get())  # Reutilización de código --- Buenas prácticas
+            clear(notebook.get())  # Reutilización de código --- Buenas prácticas
             tree.delete(tree.selection())  # Borrar la fila de la tabla
 
         restore()

@@ -196,7 +196,7 @@ def add_tag_note(note, tag):
 
 
 def delete_note(
-        note_name):  # Se eliminan también las etiquetas y la libreta asociadas ya que está la eliminación en cascada
+        note_name):  # Se eliminan también las etiquetas y la libreta asociadas: eliminación en cascada
     """
     Borra una nota de la base de datos
     :param note_name: Nota a eliminar (se elimina por nombre ya que es su clave primaria)

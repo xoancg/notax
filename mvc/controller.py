@@ -13,7 +13,7 @@ class Controlador:
     @staticmethod
     def get_controller_instance():
         """
-        Singleton - Patrón de Diseño
+        Singleton - Patrón de diseño de tipo creación
         Si no existe ninguna instancia de Controlador, la crea; si existe, devuelve la instancia existente
         :return: Instancia controlador
         """
