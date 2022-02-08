@@ -142,7 +142,7 @@ def delete_tag(tag_name):
 
 def save_notebook(notebook_name):
     """
-    Guarda una libreta nueva no existente
+    Guarda una libreta nueva o la actualiza en caso de que ya exista
     :param notebook_name: Nombre de la libreta a la que pertenece
     :return: Notebook creada
     """

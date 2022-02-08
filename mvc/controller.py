@@ -1,3 +1,4 @@
+
 import mvc.model as model
 
 
@@ -45,13 +46,18 @@ class Controlador:
         return self.model.delete_tag(tag_name)
 
     def save_notebook(self, notebook_name):
+        """
+        Guarda una libreta nueva o la actualiza en caso de que ya exista
+        :param notebook_name: Nombre de la libreta a la que pertenece
+        :return: Notebook creada
+        """
         return self.model.save_notebook(notebook_name=notebook_name)
 
     def save_note(self, notebook, title, content):
         """
         Botón GUARDAR NOTA. Elimina el registro de una nota en la base de datos y actualiza la lista de notas en
         rejilla.
-        :return: Nota guardada / actualizada
+        :return: Nota guardada/actualizada
         """
         # Si la nota ya existe - Se actualiza. Si no existe - Se crea con el contenido
         return self.model.save_note(notebook_name=notebook, title=title, content=content)
@@ -66,7 +72,7 @@ class Controlador:
 
     def assign_tag_note(self, note, tag):
         """
-        Este método se utiliza para asiggnar una etiqueta a una nota y viceversa, relacion many-to-many
+        Este método se utiliza para asignar una etiqueta a una nota y viceversa (relación many-to-many)
         :param note: Nota a utilizar en la asignación
         :param tag: Etiqueta a utilizar en la asignación
         """

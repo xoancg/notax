@@ -10,7 +10,7 @@ con = Controlador.get_controller_instance()
 
 def list_notes(tree):
     """
-    Añade las notas existentes a la tabla
+    Añade las notas existentes a la lista de notas (rejilla)
     """
     notes = con.get_notes()
     for note in notes:
@@ -98,7 +98,7 @@ def init_view():
         tree.focus()
 
     # NUEVA NOTA
-    ttk.Button(frame_note, text='NUEVA NOTA', command=nueva_nota).grid(row=5, column=0, columnspan=2, ipadx=50, pady=10)
+    ttk.Button(frame_note, text='NUEVA NOTA', command=nueva_nota).grid(row=5, column=0, columnspan=1, ipadx=15, pady=10)
 
     def guardar():
         """
@@ -140,7 +140,7 @@ def init_view():
             tree.insert('', tk.END, text=note.notebook.name, values=(note.title, note.content, note.created_date))
 
     # GUARDAR NOTA
-    ttk.Button(frame_note, text='GUARDAR', command=guardar).grid(row=6, column=0, columnspan=2, ipadx=50, pady=10)
+    ttk.Button(frame_note, text='GUARDAR', command=guardar).grid(row=5, column=1, columnspan=2, ipadx=50, pady=10)
 
     # Rejilla para mostrar la lista de notas
     frame_list = tk.LabelFrame(main_window, text=' LISTA DE NOTAS ')
