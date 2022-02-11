@@ -19,7 +19,7 @@ def list_notes(tree):
 
 def init_view():
     global frame_note
-    main_window = tk.Tk()
+    main_window = tk.Tk()  # Creamos la ventana vacía
     main_window.title('Notax')
     main_window.iconbitmap(ICO)  # Configuración en config/settings.py
 
@@ -95,7 +95,7 @@ def init_view():
 
         # Quita la selección en la lista de notas (para evitar sobreescribir la nota seleccionada con la nueva nota)
         tree.selection_set()
-        tree.focus()
+        # tree.focus()  # Retorna el id del elemento que tiene el foco (puede no coincidir con el seleccionado)
 
     # NUEVA NOTA
     ttk.Button(frame_note, text='NUEVA NOTA', command=nueva_nota).grid(row=5, column=0, columnspan=1, ipadx=15, pady=10)
@@ -213,12 +213,13 @@ def init_view():
     # BORRAR
     ttk.Button(text='BORRAR', command=borrar).grid(row=8, column=1, columnspan=2, ipadx=50, pady=10)
 
-    # Foco en la primera fila de la rejilla al abrir la ventana
-    item = tree.identify_row(0)
-    tree.selection_set(item)
-    tree.focus(item)
+    # Foco en la primera fila de la rejilla al abrir la ventana - Comentar para que se inicie sin foco (recomendado)
+    # item = tree.identify_row(0)
+    # tree.selection_set(item)
+    # tree.focus(item)
 
-    # mainloop
+    # mainloop - Muestra todos los componentes en pantalla y responde a la entrada del usuario hasta que el programa
+    # finaliza.
     main_window.mainloop()
 
 
