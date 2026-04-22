@@ -190,12 +190,10 @@ notax/
 
 - **Autor**: xoancg
 - **Proyecto**: DAM (Desarrollo de Aplicaciones Multiplataforma)  
-- **Fecha de Creación**: 06 de diciembre de 2021  
-- **Última Actualización**: 22 de abril de 2026
 
 ## 📄 Licencia
 
-Este proyecto es software de código abierto. Consulta la sección de licencia del repositorio para más detalles.
+Este proyecto es software de código abierto.
 
 ## 📞 Contacto y Contribuciones
 
