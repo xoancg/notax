@@ -140,7 +140,7 @@ notax/
 | **Tkinter** | Incluido | Framework para interfaz gráfica de escritorio |
 | **SQLite** | 3.36.0 | Base de datos relacional embebida |
 | **Peewee ORM** | 3.14.8 | Mapeador objeto-relacional para Python |
-| **Certifi** | 2021.10.8 | Certificados SSL/TLS de confianza |
+| **Certificados** | 2021.10.8 | Certificados SSL/TLS de confianza |
 
 ## 📊 Modelo de Datos
 
@@ -188,7 +188,7 @@ notax/
 
 ## 👨‍💻 Información del Autor
 
-**Autor**: Xoán Castro García (xoancg)  
+**Autor**: xoancg
 **Proyecto**: DAM (Desarrollo de Aplicaciones Multiplataforma)  
 **Fecha de Creación**: 06 de diciembre de 2021  
 **Última Actualización**: 22 de abril de 2026
