@@ -188,10 +188,10 @@ notax/
 
 ## 👨‍💻 Información del Autor
 
-**Autor**: xoancg
-**Proyecto**: DAM (Desarrollo de Aplicaciones Multiplataforma)  
-**Fecha de Creación**: 06 de diciembre de 2021  
-**Última Actualización**: 22 de abril de 2026
+- **Autor**: xoancg
+- **Proyecto**: DAM (Desarrollo de Aplicaciones Multiplataforma)  
+- **Fecha de Creación**: 06 de diciembre de 2021  
+- **Última Actualización**: 22 de abril de 2026
 
 ## 📄 Licencia
 
